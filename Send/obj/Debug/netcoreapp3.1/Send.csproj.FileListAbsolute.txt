@@ -1,0 +1,16 @@
+/home/adriano/projetos/mensageria/Send/bin/Debug/netcoreapp3.1/Send
+/home/adriano/projetos/mensageria/Send/bin/Debug/netcoreapp3.1/Send.deps.json
+/home/adriano/projetos/mensageria/Send/bin/Debug/netcoreapp3.1/Send.runtimeconfig.json
+/home/adriano/projetos/mensageria/Send/bin/Debug/netcoreapp3.1/Send.runtimeconfig.dev.json
+/home/adriano/projetos/mensageria/Send/bin/Debug/netcoreapp3.1/Send.dll
+/home/adriano/projetos/mensageria/Send/bin/Debug/netcoreapp3.1/Send.pdb
+/home/adriano/projetos/mensageria/Send/bin/Debug/netcoreapp3.1/RabbitMQ.Client.dll
+/home/adriano/projetos/mensageria/Send/bin/Debug/netcoreapp3.1/System.Threading.Channels.dll
+/home/adriano/projetos/mensageria/Send/obj/Debug/netcoreapp3.1/Send.csprojAssemblyReference.cache
+/home/adriano/projetos/mensageria/Send/obj/Debug/netcoreapp3.1/Send.AssemblyInfoInputs.cache
+/home/adriano/projetos/mensageria/Send/obj/Debug/netcoreapp3.1/Send.AssemblyInfo.cs
+/home/adriano/projetos/mensageria/Send/obj/Debug/netcoreapp3.1/Send.csproj.CoreCompileInputs.cache
+/home/adriano/projetos/mensageria/Send/obj/Debug/netcoreapp3.1/Send.csproj.CopyComplete
+/home/adriano/projetos/mensageria/Send/obj/Debug/netcoreapp3.1/Send.dll
+/home/adriano/projetos/mensageria/Send/obj/Debug/netcoreapp3.1/Send.pdb
+/home/adriano/projetos/mensageria/Send/obj/Debug/netcoreapp3.1/Send.genruntimeconfig.cache

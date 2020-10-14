@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9/5kePwdkIoPtVnyLiY7Ky68VMrf/nOMse7kJGSEnWZ2M03IjXrEwuSs0WwnpvfZN1hjnn7Sx5gvbF7n+XUQag==",
+  "dgSpecHash": "Pgbh6sTekzAF9ziuJB5BsVXDaJb0lepBrSCpP0+yxaevmPYnFs56OmnMjOxOinw4toPkXJXgHbpshjscA3X0LA==",
   "success": true,
   "projectFilePath": "/home/adriano/projetos/mensageria/Receive/Receive.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/rabbitmq.client/6.2.1/rabbitmq.client.6.2.1.nupkg.sha512",
+    "/root/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/root/.nuget/packages/system.threading.channels/4.7.1/system.threading.channels.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
