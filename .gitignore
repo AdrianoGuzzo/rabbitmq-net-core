@@ -6,3 +6,13 @@
 /Send/bin
 /Send/obj
 /Send/.vs
+/Receive/bin
+/Receive/obj
+/Receive/.vs
+/Common/MessageQueue/bin
+/Common/MessageQueue/obj
+/Common/MessageQueue/.vs
+/Common/Model/bin
+/Common/Model/obj
+/Common/Model/.vs
+/Common/.vs
