@@ -5,12 +5,12 @@
   - O projeto foi sepadaro em dois serviços console, onde um envia as mensagens para a fila(Send) e o outro recebe as mensagens(Receive)
   
 
-# Intalando o RappiMQ em um conteiner docker no Linux(ubuntu 20.04)
+# Intalando o RappiMQ em um container docker no Linux(ubuntu 20.04)
 ### Pré requisito
  - Ter o [Docker](https://docs.docker.com/engine/install/ubuntu/) instalado 
 ### Instruções
 
-1) Crie o diretório abaixo para persistir os dados fora do conteiner.
+1) Crie o diretório abaixo para persistir os dados fora do container.
 ```sh
 mkdir -p /docker/rabbitmq/data
 ```
@@ -24,7 +24,7 @@ Use o comando abaixo para listar as imagens obtidas.
 ```sh
 docker images
 ```
-3) Execute o conteiner do RabbitMQ.
+3) Execute o container do RabbitMQ.
 ```sh
 docker run -d --name rabbitmq \
  -p 5672:5672 \
@@ -35,7 +35,7 @@ docker run -d --name rabbitmq \
  rabbitmq:$VERSAO
 ```
 4) Acesse o RabbitMQ na URL http://localhost:15672. O login padrão é guest e a senha é guest.
-5) Se quiser parar o conteiner, é só executar o comando abaixo.
+5) Se quiser parar o container, é só executar o comando abaixo.
 ```sh
 docker stop rabbitmq
 ```
