@@ -10,8 +10,8 @@ namespace Receive
     class Program
     {
         private const string SERVICE_ID = "receive_service";
-        private const string USER_NAME_RABBITMQ = "adriano";
-        private const string PASSWORD_RABBITMQ = "1234";
+        private const string USER_NAME_RABBITMQ = "guest";
+        private const string PASSWORD_RABBITMQ = "guest";
         private const string HOSTNAME_RABBITMQ = "127.0.0.1";
 
         static void Main(string[] args)
