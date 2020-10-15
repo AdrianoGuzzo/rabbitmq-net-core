@@ -2,6 +2,7 @@
 
   - Projeto desenvolvido em C# .net core 3.1
   - Foi usado o RabbitMQ para desenvolver a mensageria 
+  - O projeto foi sepadaro em dois serviços console, onde um envia as mensagens para a fila(Send) e o outro recebe as mensagens(Receive)
   
 
 # Intalando o RappiMQ em um container docker no Linux(ubuntu 20.04)
