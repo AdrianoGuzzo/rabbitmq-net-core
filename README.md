@@ -5,7 +5,7 @@
   - O projeto foi sepadaro em dois serviços console, onde um envia as mensagens para a fila(Send) e o outro recebe as mensagens(Receive)
   
 
-# Intalando o RappiMQ em um container docker no Linux(ubuntu 20.04)
+# Intalando o RappiMQ em um conteiner docker no Linux(ubuntu 20.04)
 ### Pré requisito
  - Ter o [Docker](https://docs.docker.com/engine/install/ubuntu/) instalado 
 ### Instruções
