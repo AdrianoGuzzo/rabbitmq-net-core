@@ -1,35 +1,43 @@
 ﻿using System;
 using System.Text;
-using RabbitMQ.Client;
+using System.Threading;
+using MessageQueue;
+using MessageQueue.Service;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+
 
 namespace Send
 {
     class Program
     {
+        private const string SERVICE_ID = "send_service";
+        private const string USER_NAME_RABBITMQ = "adriano";
+        private const string PASSWORD_RABBITMQ = "1234";
+        private const string HOSTNAME_RABBITMQ = "127.0.0.1";
+
         static void Main(string[] args)
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using(var connection = factory.CreateConnection())
-            using(var channel = connection.CreateModel())
-            {
-                channel.QueueDeclare(queue: "hello",
-                                    durable: false,
-                                    exclusive: false,
-                                    autoDelete: false,
-                                    arguments: null);
+            var serviceProvider = new ServiceCollection()
+            .AddLogging()
+            .AddScoped<IRabbitMQContext, RabbitMQContext>(x => new RabbitMQContext(SERVICE_ID, USER_NAME_RABBITMQ, PASSWORD_RABBITMQ, HOSTNAME_RABBITMQ))
+            .AddScoped<IQueueService, QueueService>()
+            .BuildServiceProvider();
 
-                string message = "Hello World!";
-                var body = Encoding.UTF8.GetBytes(message);
+            serviceProvider
+            .GetService<ILoggerFactory>();
 
-                channel.BasicPublish(exchange: "",
-                                    routingKey: "hello",
-                                    basicProperties: null,
-                                    body: body);
-                Console.WriteLine(" [x] Sent {0}", message);
-            }
+            var logger = serviceProvider.GetService<ILoggerFactory>()
+                .CreateLogger<Program>();
+            logger.LogDebug("Starting application");
+            IQueueService queueService = serviceProvider.GetService<IQueueService>();
 
-            Console.WriteLine(" Press [enter] to exit.");
+            queueService.StartJobSend();
+
+            Console.WriteLine("Press [enter] to exit.");
             Console.ReadLine();
         }
+
+
     }
 }

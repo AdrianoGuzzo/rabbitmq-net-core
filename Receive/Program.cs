@@ -1,38 +1,40 @@
 ﻿using System;
 using System.Text;
-using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
+using MessageQueue;
+using MessageQueue.Service;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Receive
 {
     class Program
     {
+        private const string SERVICE_ID = "receive_service";
+        private const string USER_NAME_RABBITMQ = "adriano";
+        private const string PASSWORD_RABBITMQ = "1234";
+        private const string HOSTNAME_RABBITMQ = "127.0.0.1";
+
         static void Main(string[] args)
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
-            {
-                channel.QueueDeclare(queue: "hello",
-                                    durable: false,
-                                    exclusive: false,
-                                    autoDelete: false,
-                                    arguments: null);
+            var serviceProvider = new ServiceCollection()
+            .AddLogging()
+            .AddScoped<IRabbitMQContext, RabbitMQContext>(x => new RabbitMQContext(SERVICE_ID, USER_NAME_RABBITMQ, PASSWORD_RABBITMQ, HOSTNAME_RABBITMQ))
+            .AddScoped<IQueueService, QueueService>()
+            .BuildServiceProvider();
 
-                var consumer = new EventingBasicConsumer(channel);
-                consumer.Received += (model, ea) =>
-                {
-                    var body = ea.Body.ToArray();
-                    var message = Encoding.UTF8.GetString(body);
-                    Console.WriteLine(" [x] Received {0}", message);
-                };
-                channel.BasicConsume(queue: "hello",
-                                    autoAck: true,
-                                    consumer: consumer);
+            serviceProvider
+            .GetService<ILoggerFactory>();
 
-                Console.WriteLine(" Press [enter] to exit.");
-                Console.ReadLine();
-            }
+            var logger = serviceProvider.GetService<ILoggerFactory>()
+                .CreateLogger<Program>();
+
+            logger.LogDebug("Starting application");
+            IQueueService queueService = serviceProvider.GetService<IQueueService>();
+
+            queueService.StartReceive();
+
+           
+
         }
     }
 }

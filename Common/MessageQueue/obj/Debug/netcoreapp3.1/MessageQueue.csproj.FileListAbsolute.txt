@@ -1,0 +1,11 @@
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\bin\Debug\netcoreapp3.1\MessageQueue.deps.json
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\bin\Debug\netcoreapp3.1\MessageQueue.dll
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\bin\Debug\netcoreapp3.1\MessageQueue.pdb
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\obj\Debug\netcoreapp3.1\MessageQueue.csprojAssemblyReference.cache
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\obj\Debug\netcoreapp3.1\MessageQueue.AssemblyInfoInputs.cache
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\obj\Debug\netcoreapp3.1\MessageQueue.AssemblyInfo.cs
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\obj\Debug\netcoreapp3.1\MessageQueue.dll
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\obj\Debug\netcoreapp3.1\MessageQueue.pdb
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\bin\Debug\netcoreapp3.1\Model.dll
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\bin\Debug\netcoreapp3.1\Model.pdb
+D:\projetos\Mensageria\rabbitmq-net-core\Common\MessageQueue\obj\Debug\netcoreapp3.1\MessageQueue.csproj.CopyComplete
